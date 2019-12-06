@@ -2,6 +2,6 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-    "deploy": "now --no-clipboard --token=$NOW_TOKEN"
+    "build": ""
   }
 }
