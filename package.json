@@ -2,6 +2,6 @@
   "private": true,
   "dependencies": {},
   "scripts": {
-    "build": ""
+    "build": "echo 'doing nothing'"
   }
 }
