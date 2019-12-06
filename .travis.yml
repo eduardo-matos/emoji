@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - '8'
+before_install:
+  - npm i -g now
+deploy:
+  provider: script
+  script: npm run deploy
+  skip_cleanup: true
+  on:
+    branch: master
