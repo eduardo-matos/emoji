@@ -7,7 +7,7 @@
   <title>Emoji</title>
 
   <style>
-   ul { list-style: none; }
+    ul { list-style: none; }
 
     li {
       margin-bottom: 10px;
@@ -15,20 +15,35 @@
       clear: both;
       float: left;
       padding: 3px;
-     }
+    }
+
+    pre, code { font-family: Consolas,Menlo,"Liberation Mono",Courier,monospace; margin: 0 }
+
+    [data-clipboard-text]:hover { color: red; cursor: pointer }
+
+    .big { font-size: 36px }
   </style>
 </head>
 <body>
   <ul>
     <li data-clipboard-text="¯\_(ツ)_/¯">¯\_(ツ)_/¯</li>
     <li data-clipboard-text="(╯°□°）╯︵ ┻━┻">(╯°□°）╯︵ ┻━┻</li>
+    <li class="big">
+      <pre>
+<code data-clipboard-text="┏">┏</code><code data-clipboard-text="━">━</code><code data-clipboard-text="┳">┳</code><code data-clipboard-text="━">━</code><code data-clipboard-text="┓">┓</code>
+<code data-clipboard-text="┃">┃</code><code> </code><code data-clipboard-text="┃">┃</code><code> </code><code data-clipboard-text="┃">┃</code>
+<code data-clipboard-text="┣">┣</code><code data-clipboard-text="━">━</code><code data-clipboard-text="╋">╋</code><code data-clipboard-text="━">━</code><code data-clipboard-text="┫">┫</code>
+<code data-clipboard-text="┃">┃</code><code> </code><code data-clipboard-text="┃">┃</code><code> </code><code data-clipboard-text="┃">┃</code>
+<code data-clipboard-text="┗">┗</code><code data-clipboard-text="━">━</code><code data-clipboard-text="┻">┻</code><code data-clipboard-text="━">━</code><code data-clipboard-text="┛">┛</code>
+      </pre>
+    </li>
   </ul>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
   <script>
-    var clipboard = new ClipboardJS(document.querySelectorAll('li'));
+    var clipboard = new ClipboardJS(document.querySelectorAll('[data-clipboard-text]'));
 
     clipboard.on('success', e => {
         $(e.trigger).css('background-color', '#E4FC5B').animate({
